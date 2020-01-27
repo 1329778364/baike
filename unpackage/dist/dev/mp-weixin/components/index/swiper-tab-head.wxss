@@ -1,0 +1,18 @@
+
+.uni-swiper-tab{
+	border-bottom: 1px solid #EEEEEE;
+}
+.swiper-tab-list {
+	color: #969696;
+	font-weight: bold;
+}
+.uni-tab-bar .active{ 
+	color: #343434;
+}
+/* 在active 执行的情况下载踩会生效 下面的这个样式 */
+.active .swiper-tab-line{
+	width: 60px;
+	margin: auto;
+	border-bottom: 4px solid #FEDE33;
+}
+

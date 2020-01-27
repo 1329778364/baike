@@ -1,0 +1,53 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/news/news",
+        "pages/paper/paper",
+        "pages/profile/profile",
+        "pages/search/search",
+        "pages/addInput/addInput",
+        "pages/fabu/fabu",
+        "pages/qiandao/qiandao"
+    ],
+    "subPackages": [],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "糗事百科",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "tabBar": {
+        "color": "#333333",
+        "selectedColor": "#ffdf34",
+        "borderStyle": "black",
+        "backgroundColor": "#FFFDEF",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "./static/icon/home.png",
+                "text": "糗事",
+                "selectedIconPath": "./static/icon/home_active.png"
+            },
+            {
+                "pagePath": "pages/news/news",
+                "iconPath": "./static/icon/news.png",
+                "text": "动态",
+                "selectedIconPath": "./static/icon/news_active.png"
+            },
+            {
+                "pagePath": "pages/paper/paper",
+                "iconPath": "./static/icon/chat.png",
+                "text": "小纸条",
+                "selectedIconPath": "./static/icon/chat_active.png"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "iconPath": "./static/icon/profile.png",
+                "text": "我的",
+                "selectedIconPath": "./static/icon/profile_active.png"
+            }
+        ]
+    },
+    "usingComponents": {},
+    "sitemapLocation": "sitemap71.json"
+}
