@@ -1,3 +1,4 @@
+/* 布局 */
 .u-f, .u-f-ac, .u-f-ajc, .u-f-dc{
 	display: flex;
 }
@@ -8,8 +9,215 @@
 	justify-content: center;
 }
 .u-f-jsb{
-	justify-content: space-around;
+	justify-content: space-between;
+}
+.u-f-jsa{
+	justify-content: space-arround;
 }
 .u-f-dc{
 	flex-direction: column;
+}
+.u-flex-start{
+	justify-content: flex-start;
+}
+.u-f1{
+	flex:1;
+}
+
+
+.page{
+	width: 100vm;
+	padding: 10rpx;
+}
+
+.margin-box{
+	margin: 10rpx;
+	border-radius: 10rpx;
+	padding: 5rpx 10rpx;
+}
+.border-gray{
+	border: 1rpx solid #EEEEEE;
+}
+
+/* 边框圆角 */
+.boder-radius-small{
+	border-radius: 10rpx;
+}
+.boder-radius-base{
+	border-radius: 20rpx;
+}
+
+/* 字体大小 */
+
+.icon-size-xxl{
+	font-size: 50rpx;	
+}
+.icon-size-xl{
+	font-size: 38rpx;	
+}
+.icon-margin-right{
+	margin-right: 20rpx;
+}
+.font-size-lg{
+	font-size: 32rpx;
+}
+.font-size-middle{
+	font-size: 28rpx;
+}
+.font-size-small{
+	font-size: 23rpx;
+}
+.font-color-gray{
+	color: #aaaaaa;
+}
+
+.font-color-red{
+	color: #ff0000;
+}
+
+.font-color-white{
+	color: #FFFFFF;
+}
+/* 边框颜色 用于测试 */
+.border-test{
+	border: 1rpx solid #0A98D5;
+}
+
+/* 背景颜色 */
+.bgc-gray{
+	background-color: #f4f4f4;
+}
+
+.width-full{
+	width: 100%;
+	height: 100%;
+}
+
+/* 常用边框统一格式 */
+.border-box{
+	margin: 10rpx 10rpx;
+	padding: 20rpx 20rpx;
+	border: 1px solid #e8e8e8;
+	background-color: #FFFFFF;
+	border-radius: 20rpx;
+}
+.border-box-no-border{
+	margin: 10rpx 10rpx;
+	padding: 10rpx 10rpx;
+	background-color: #FFFFFF;
+	border-radius: 20rpx;
+}
+.border-bottom-gray{
+	border-bottom:1rpx solid #EEEEEE;
+}
+/* 用于图片的 正方形显示 */
+.image-rectangle{
+	width: 100%;
+	height: 100%;
+	border-radius: 20rpx;
+	
+}
+.bgc-green{
+	background-color: #95ec69;
+}
+.image-box{
+	width: 150rpx;
+	height: 150rpx;
+	margin: 10px;
+	flex-shrink: 0;
+}
+.avatar{
+	width:  100rpx;
+	height: 100rpx;
+	margin-right: 20rpx;
+	flex-shrink: 0;
+}
+
+.avatar-big{
+	width:  150rpx;
+	height: 150rpx;
+	flex-shrink: 0;
+}
+.avatar-small{
+	width:  70rpx;
+	height: 70rpx;
+	margin-right: 20rpx;
+	flex-shrink: 0;
+}
+.avatar-circle{
+	border-radius: 100%;
+}
+.avatar-rectangle{
+	border-radius: 15rpx;
+}
+
+.avatar-rectangle-small{
+	border-radius: 10rpx;
+}
+.item-line{
+	margin-top: 20rpx;
+}
+
+.icon-fontsize-lg{
+	font-size: 40rpx!important ;
+}
+.page-bgc{
+	background-color: #ededed;
+	width: 100vm;
+	/* padding: 10rpx; */
+}
+.bar-bgc{
+	background-color: #f7f7f7;
+}
+.border-top{
+	border-top:1rpx solid #f7f7f7;
+	box-shadow: 0px -1rpx 1rpx #f7f7f790
+}
+
+
+.bgc-wx{
+	background-color: #2AD19B;
+}
+.bgc-pyq{
+	background-color: #514D4C;
+}
+
+.bgc-wb{
+ background-color: #EE5E5E;	
+}
+.bgc-qq{
+ background-color: #4A73BA;	
+}
+
+
+/* 点击时的背景颜色 */
+.hover-color-gray{
+	background-color: #EEEEEE;
+}
+
+
+.list-item{
+		padding: 10rpx 0;
+}
+
+.btn-normal{
+	width: 90%!important;
+	margin: 20rpx 0;
+	color: #000000!important;
+}
+
+.bgc-yellow{
+	background-color: #FFE933!important;
+}
+
+
+.common-input{
+	font-size: 30rpx;
+	border-bottom: 1rpx solid #f4f4f4;
+}
+.btn-disable{
+	background-color: #f4f4f4!important;
+	border: 1rpx solid #EEEEEE!important;
+	color: #909090!important;
+	
 }

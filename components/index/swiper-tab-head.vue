@@ -2,11 +2,11 @@
 	<view class="uni-tab-bar">
 		<scroll-view scroll-x class="uni-swiper-tab">
 			<block v-for="(item, index) in tabbars" :key="index">
-				<view @click="chooseTab(index)" class="swiper-tab-list" :class="[(tabindex == index)?'active':'']" :id="item.id" >
-					{{item.name}}
+				<view :style="scrollItemStyle" @click="chooseTab(index)" class="swiper-tab-list" :class="[(tabindex == index)?'active':'']" :id="item.id" >
+					{{item.name}} {{item.num?item.num:""}}
 					<view class="swiper-tab-line"></view>
 				</view>
-			</block>
+			</block> 
 		</scroll-view>
 	</view>	
 </template> 
@@ -15,7 +15,11 @@
 	export default {
 		props:{
 			tabbars:Array,
-			tabindex:Number 
+			tabindex:Number ,
+			scrollItemStyle:{
+				type:String,
+				default:""
+			}
 		},
 		methods:{
 			chooseTab(index){

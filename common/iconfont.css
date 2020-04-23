@@ -9,6 +9,29 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } 
+.icon-zhangshangcaifuyemianshoujiban344:before {
+  content: "\e631";
+}
+
+.icon-iconfontzhizuobiaozhunbduan36:before {
+  content: "\e6e9";
+}
+
+.icon-pengyouquan:before {
+  content: "\e6a0";
+}
+
+.icon-weixin:before {
+  content: "\e6ea";
+}
+
+.icon-pengyouquan2:before {
+  content: "\e615";
+}
+
+.icon-pengyouquan1:before {
+  content: "\e692";
+}
 
 .icon-kulian:before {
   content: "\e600";

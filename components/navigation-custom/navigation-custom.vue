@@ -1,14 +1,14 @@
 <template>
 	<view class="navigation-bar" :style="{height:height}">
-		<view class="navigation-bar-fixed" :style="{height:height,background:(!config.transparent&&!config.linear)?config.bgcolor:'transparent'}">
+		<view class="navigation-bar-fixed" :style="{height:height,background:((!config.transparent) && (!config.linear))?config.bgcolor:'transparent'}">
 			<!-- capsule or normal -->
 			<view v-if="[1,2].indexOf(config.type)!= -1" :class="config.type==1?'navigation-bar-capsule':'navigation-bar-textbox'" :style="{top:marginTop}">
-				<view class="button-action" hover-class="button-action-active" @click="back_">
-					<image src="../../static/icon/navbar/back_.png" mode=""></image>
-				</view>
+				<view class="button-action" hover-class="button-action-active" @click="clickleft">
+					<image :src="config.leftimage" mode=""></image>
+				</view>	
 				<view class="button-v-line"></view>
-				<view v-if="!config.share" class="button-action" hover-class="button-action-active" @click="home_">
-					<image src="../../static/icon/navbar/home_.png" mode=""></image>
+				<view v-if="!config.share" class="button-action" hover-class="button-action-active" @click="clickright">
+					<image :src="config.rightimage" mode=""></image>
 				</view>
 				<view v-if="config.share" class="button-action" hover-class="button-action-active">
 					<button class="button_clear" open-type="share" hover-class="none">
@@ -22,7 +22,9 @@
 				<text class="custom-describe">{{config.menuText}}</text>
 			</view>
 			<!-- title -->
-			<view class="navigation-bar-title" :style="'margin-top:'+marginTop+';color:'+config.fontcolor">{{config.title}}</view>
+			<view class="navigation-bar-title" :style="'margin-top:'+marginTop+';color:'+config.fontcolor">
+				<slot name="middle">{{config.title}}</slot>
+			</view>
 			<!-- linear background -->
 			<view v-if="config.linear" class="navigation-bar-linear" :style="{height:height,background:config.bgcolor,opacity:scrollTop/scrollMaxHeight}"></view>
 		</view>
@@ -56,10 +58,10 @@
 			}
 		},
 		updated() {
-			console.log(this.config)
+			// console.log(this.config)
 		},
 		mounted() {
-			console.log(this.config)
+			// console.log(this.config)
 			
 		},
 		props:{
@@ -88,15 +90,11 @@
 			}
 		},
 		methods:{
-			back_(){
-				uni.navigateBack({
-					delta:1
-				});
+			clickleft(){
+				this.$emit("clickleft")
 			},
-			home_(){
-				uni.switchTab({
-					url:"/pages/index/index"
-				})
+			clickright(){
+				this.$emit("clickright")
 			},
 			conduct_(){
 				this.$emit("customConduct")

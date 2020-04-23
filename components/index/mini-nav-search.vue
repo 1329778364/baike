@@ -2,7 +2,7 @@
 	<view>
 		<mini-nav-bar :fixed="true" :border=false statusBar=true color="#333333" background-color="#FFFFFF" @click-right="navToFabu">
 			<view slot="left" class="u-f-ajc qiandao">
-				<view class="icon iconfont icon-qiandao" style="font-size: 40rpx; color: #FF9619;"></view>
+				<view class="icon iconfont icon-qiandao" style="font-size: 40rpx; color: #FF9619;" @click="qiandao"></view>
 			</view>
 			<view class="input-view">
 				<view class="icon iconfont icon-sousuo"></view>
@@ -30,10 +30,11 @@
 			/* 使用的时候只要传入city 数据便可以 */
 		},
 		methods:{
-			navToFabu(){
-				uni.navigateTo({
-					url: '../../pages/addInput/addInput'
-					});
+			qiandao(e){
+				this.$emit("qiandao", e)
+			},
+			navToFabu(e){
+				this.$emit("fabu", e) 
 			},
 			onSearch(e){
 				this.$emit("search", e) /* 对外暴露的接口 为search*/
