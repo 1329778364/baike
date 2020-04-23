@@ -1,0 +1,28 @@
+{
+	"data": {
+		"msg": "获取统计数据成功",
+		"data": {
+			"counts": {
+				"postcount": 8,
+				"todaypost": 0,
+				"followcount": 4,
+				"fenscount": 1,
+				"posttotaldingnum": 1
+			}
+		}
+	},
+	"statusCode": 200,
+	"header": {
+		"X-Android-Sent-Millis": "1582529944387",
+		"Content-Type": "application/json; charset=utf-8",
+		"_": "HTTP/1.1 200 OK",
+		"X-Android-Selected-Protocol": "http/1.1",
+		"Date": "Mon, 24 Feb 2020 07:39:09 GMT",
+		"Server": "nginx",
+		"Transfer-Encoding": "chunked",
+		"X-Android-Response-Source": "NETWORK 200",
+		"Connection": "keep-alive",
+		"X-Android-Received-Millis": "1582529944471"
+	},
+	"errMsg": "request:ok"
+}
