@@ -1,0 +1,11 @@
+{
+  "navigationStyle": "custom",
+  "animationType": "slide-in-bottom",
+  "titleNView": false,
+  "bounce": "none",
+  "scrollIndicator": "none",
+  "usingComponents": {
+    "uni-status-bar": "/components/uni-status-bar/uni-status-bar",
+    "other-login": "/components/profile/other-login"
+  }
+}

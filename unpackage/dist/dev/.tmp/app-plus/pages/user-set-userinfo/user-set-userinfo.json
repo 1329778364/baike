@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "修改资料",
+  "animationType": "slide-in-bottom",
+  "usingComponents": {
+    "mpvue-city-picker": "/components/mpvue-citypicker/mpvueCityPicker"
+  }
+}

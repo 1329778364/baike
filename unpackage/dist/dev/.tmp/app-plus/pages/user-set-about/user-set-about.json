@@ -1,0 +1,6 @@
+{
+  "animationType": "slide-in-bottom",
+  "usingComponents": {
+    "home-list-item": "/components/profile/profile-list-item"
+  }
+}

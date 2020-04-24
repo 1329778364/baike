@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"paper-list.",[1],"data-v-2a1cdc1c { padding: ",[0,20],"; }\n",],undefined,{path:"./pages/paper/paper.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/paper/paper.wxml') } }));

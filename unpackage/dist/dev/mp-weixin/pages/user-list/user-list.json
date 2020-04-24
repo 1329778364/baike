@@ -1,0 +1,11 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "user-list-item": "/components/user-list-item/user-list-item",
+    "mini-nav-bar": "/components/common/mini-nav-bar",
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "swiper-tab-head": "/components/index/swiper-tab-head",
+    "load-more": "/components/common/load-more",
+    "no-thing": "/components/common/no-thing"
+  }
+}

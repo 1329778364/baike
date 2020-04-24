@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "home-list-item": "/components/profile/profile-list-item"
+  }
+}

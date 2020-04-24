@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "我的",
+  "animationType": "slide-in-bottom",
+  "usingComponents": {
+    "navigation-custom": "/components/navigation-custom/navigation-custom",
+    "profile-list-item": "/components/profile/profile-list-item",
+    "profile-info": "/components/profile/profile-info",
+    "other-login": "/components/profile/other-login",
+    "profile-data": "/components/profile/profile-data"
+  }
+}

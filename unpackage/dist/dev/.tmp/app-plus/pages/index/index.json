@@ -1,0 +1,45 @@
+{
+  "navigationStyle": "custom",
+  "animationType": "slide-in-bottom",
+  "scrollIndicator": "none",
+  "softinputMode": "adjustResize",
+  "titleNView": {
+    "backgroundColor": "#FFFFFF",
+    "autoBackButton": false,
+    "searchInput": {
+      "align": "center",
+      "backgroundColor": "#f7f7f7",
+      "borderRadius": "4px",
+      "placeholder": "搜索糗事",
+      "placeholderColor": "#CCCCCC",
+      "disabled": true
+    },
+    "buttons": [
+      {
+        "color": "#FF9619",
+        "colorPressed": "#BBBBBB",
+        "float": "left",
+        "fontSize": "20px",
+        "fontSrc": "./static/icon.ttf",
+        "text": ""
+      },
+      {
+        "color": "#000000",
+        "colorPressed": "#BBBBBB",
+        "float": "right",
+        "fontSize": "20px",
+        "fontSrc": "./static/icon.ttf",
+        "text": ""
+      }
+    ]
+  },
+  "bounce": "none",
+  "pullToRefresh": {},
+  "usingComponents": {
+    "mini-nav-search": "/components/index/mini-nav-search",
+    "index-list": "/components/index/index-list",
+    "swiper-tab-head": "/components/index/swiper-tab-head",
+    "load-more": "/components/common/load-more",
+    "no-thing": "/components/common/no-thing"
+  }
+}
