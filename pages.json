@@ -6,13 +6,15 @@
 				"navigationStyle":"custom",
 				// "disableScroll":true,
 				"app-plus":{
+					"animationType":"slide-in-bottom",
 					"scrollIndicator":"none",
 					"softinputMode":"adjustResize",
 					"titleNView":{
+						"backgroundColor":"#FFFFFF",
 						"autoBackButton":false,
 						"searchInput":{
 							"align":"center",
-							"backgroundColor":"#F7F7F7",
+							"backgroundColor":"#f7f7f7",
 							"borderRadius":"4px",
 							"placeholder":"搜索糗事",
 							"placeholderColor":"#CCCCCC",
@@ -54,26 +56,40 @@
 			"path": "pages/news/news",
 			"style": {
 				"navigationStyle":"custom",
-				"navigationBarTitleText": "动态"
+				"navigationBarTitleText": "动态",
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
 			}
 		},
 		{
 			"path": "pages/paper/paper",
 			"style": {
-				"navigationBarTitleText": "小纸条"
+				"enablePullDownRefresh":true,
+				"navigationBarTitleText": "小纸条",
+				"navigationStyle":"custom",
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
 			}
 		},
 		{
 			"path": "pages/profile/profile",
 			"style": {
-				"navigationBarTitleText": "我的" 
+				"navigationStyle":"custom",
+				"navigationBarTitleText": "我的" ,
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
 			}
 		}
 	    ,{
             "path" : "pages/search/search",
             "style" : {
+				"enablePullDownRefresh":true,
 				"navigationStyle":"custom",
 				"app-plus":{ 
+					"animationType":"slide-in-bottom",
 					"titleNView":{
 						"autoBackButton":false,
 						"searchInput":{
@@ -101,10 +117,11 @@
 			}
         }
         ,{
-            "path" : "pages/addInput/addInput",
+            "path" : "pages/add-input/add-input",
             "style" : {
 				"navigationStyle":"custom",
 				"app-plus":{
+					"animationType":"slide-in-bottom",
 					"titleNView":false
 				}
 				
@@ -112,12 +129,169 @@
         }
         ,{
             "path" : "pages/fabu/fabu",
-            "style" : {}
+            "style" : {
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
         }
         ,{
             "path" : "pages/qiandao/qiandao",
+            "style" : {
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/topic-nav/topic-nav",
+            "style" : {
+				"navigationStyle":"custom"			
+			}
+        }
+        ,{
+            "path" : "pages/topic-detail/topic-detail",
+            "style" : {
+				"enablePullDownRefresh":true,
+				"navigationStyle":"custom",
+				
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{ 
+            "path" : "pages/user-list/user-list",
+            "style" : {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-chat/user-chat",
+            "style" : {
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+				// "navigationStyle":"custom"
+			}
+        }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" : {
+				"app-plus":{
+					"animationType":"slide-in-bottom",
+					"scrollIndicator":"none",
+					"bounce":"none",
+					"titleNView":{
+						"buttons":[
+							{
+								"type":"menu"
+							}
+						]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-set/user-set",
+            "style" : {
+				"navigationBarTitleText":"设置",
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-set-repassword/user-set-repassword",
+            "style" : {
+				"navigationBarTitleText":"修改密码" ,
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-set-email/user-set-email",
+            "style" : {
+				"navigationBarTitleText":"修改邮箱",
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-set-userinfo/user-set-userinfo",
+            "style" : {
+				"navigationBarTitleText":"修改资料",
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-set-help/user-set-help",
+            "style" : {
+				"navigationBarTitleText":"意见反馈",
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-set-about/user-set-about",
+            "style" : {
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/login/login",
+			
+            "style" : {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"animationType":"slide-in-bottom",
+					"titleNView":false,
+					"bounce":"none",
+					"scrollIndicator":"none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-space/user-space",
+            "style" : {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"animationType":"slide-in-bottom"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/user-bind-phone/user-bind-phone",
             "style" : {}
         }
+        ,{
+            "path" : "pages/user-safe/user-safe",
+            "style" : {
+				"navigationBarTitleText": "账号与安全"
+			}
+        }
+        ,{
+            "path" : "pages/user-feedback/user-feedback",
+            "style" : {
+				"navigationBarTitleText": "用户反馈"
+			}
+        },
+		{
+		    "path" : "pages/zhiwen-livepush/zhiwen-livepush",
+		    "style" : {
+				"navigationStyle":"custom"
+			}
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -129,7 +303,7 @@
 		"color":"#333333",
 		"selectedColor":"#ffdf34",
 		"borderStyle":"black",
-		"backgroundColor":"#FFFDEF",
+		"backgroundColor":"#ffffff",
 		"list":[{
 			"pagePath":"pages/index/index",
 			"iconPath":"./static/icon/home.png",

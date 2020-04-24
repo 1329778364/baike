@@ -1,0 +1,127 @@
+.mini-box{
+		max-width: 70rpx;
+		min-width: 10rpx;
+		margin: 0 5px 0 2px;
+}
+.common-list-share{
+	background-color: #EEEEEE;
+	padding: 8rpx ;
+	border-radius: 20rpx;
+}
+.common-list-share image{
+		width: 200rpx;
+		height: 150rpx;
+		border-radius: 20rpx;
+		margin-right: 10rpx;
+}
+.content{
+	background-color: #eaeaea;
+}
+.nav-tab-bar>view{
+		font-size: 32rpx;
+		padding: 0 20rpx;
+		font-weight: bold;
+		color: #969696;
+}
+.active{
+	color: #333333!important;
+}
+.nav-tab-bar-line{
+	border-bottom:  5rpx solid #ffee30;
+	border-top:  5rpx solid #ffee30;
+	width: 70rpx;
+	border-radius: 20rpx;
+}
+.common-list{
+	width: 100%;
+	padding: 20rpx 20rpx;
+	margin: 10rpx 20rpx;
+	border: 1px solid #efefef;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+.common-image-box{
+	position: relative;
+	/* width: 100%;  */
+}
+.common-list-playinfo{
+	position: absolute;
+	bottom: 10rpx;
+	right: 10rpx;
+	color: #FFFFFF;
+	background-color: #676767;
+	font-size: 26rpx;
+	border-radius: 20rpx;
+	padding: 2rpx 10rpx;
+	line-height: 30rpx;
+}
+.common-list-play{
+	position: absolute;
+	color: rgba($color: #ffffff, $alpha: 0.9);
+	font-size:  130rpx;
+}
+.common-list-r{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	margin-left: 10rpx;
+}
+.bottom-info{
+	margin-top: 10rpx;
+}
+.bottom-info>view{
+	color: #AAA;
+}
+.bottom-info>view:nth-child(2)>view{
+	/* // margin-left: 10rpx; */
+	padding-left: 5rpx;
+	font-size: 28rpx;
+}
+.guanzhuButton{
+	background-color: #f4f4f4;
+	padding: 0 10rpx;
+	font-size: 28rpx;
+	border-radius: 20rpx;
+}
+.common-list-l image{
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+	width: 90rpx;
+	height: 90rpx;
+	border-radius: 100%;
+}
+tag-sex-age{
+	margin-left: 10rpx;
+}
+.login-input-box{
+	position: relative;
+}
+.login-input-box .forget-input{
+	padding-right: 150rpx;
+}
+.login-input-box .forget{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: 100;
+}
+.login-input-box .forget{
+	width: 150rpx;
+	right: 0;
+}
+.login-input-box .phone{
+	width:100rpx;
+	left: 0;
+	font-weight: bold;
+}
+.login-input-box .phone-input{
+	padding-left: 100rpx;
+}
+.yanzhengma view{
+	background: #EEEEEE;
+	border-radius: 10rpx;
+	font-size: 25rpx;
+	width: 150rpx;
+	padding: 10rpx 0;
+}
+

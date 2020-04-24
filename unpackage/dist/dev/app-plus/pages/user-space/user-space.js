@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"user-space-data { position: relative; margin-top: ",[0,-20],"; }\n",],undefined,{path:"./pages/user-space/user-space.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/user-space/user-space.wxml') } }));

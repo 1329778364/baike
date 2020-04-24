@@ -5,9 +5,26 @@
         "pages/paper/paper",
         "pages/profile/profile",
         "pages/search/search",
-        "pages/addInput/addInput",
+        "pages/add-input/add-input",
         "pages/fabu/fabu",
-        "pages/qiandao/qiandao"
+        "pages/qiandao/qiandao",
+        "pages/topic-nav/topic-nav",
+        "pages/topic-detail/topic-detail",
+        "pages/user-list/user-list",
+        "pages/user-chat/user-chat",
+        "pages/detail/detail",
+        "pages/user-set/user-set",
+        "pages/user-set-repassword/user-set-repassword",
+        "pages/user-set-email/user-set-email",
+        "pages/user-set-userinfo/user-set-userinfo",
+        "pages/user-set-help/user-set-help",
+        "pages/user-set-about/user-set-about",
+        "pages/login/login",
+        "pages/user-space/user-space",
+        "pages/user-bind-phone/user-bind-phone",
+        "pages/user-safe/user-safe",
+        "pages/user-feedback/user-feedback",
+        "pages/zhiwen-livepush/zhiwen-livepush"
     ],
     "subPackages": [],
     "window": {
@@ -20,7 +37,7 @@
         "color": "#333333",
         "selectedColor": "#ffdf34",
         "borderStyle": "black",
-        "backgroundColor": "#FFFDEF",
+        "backgroundColor": "#ffffff",
         "list": [
             {
                 "pagePath": "pages/index/index",
@@ -49,5 +66,5 @@
         ]
     },
     "usingComponents": {},
-    "sitemapLocation": "sitemap71.json"
+    "sitemapLocation": "sitemap82.json"
 }

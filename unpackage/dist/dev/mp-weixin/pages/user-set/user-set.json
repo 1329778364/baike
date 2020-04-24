@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "设置",
+  "usingComponents": {
+    "profile-list-item": "/components/profile/profile-list-item"
+  }
+}

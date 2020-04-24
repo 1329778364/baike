@@ -1,0 +1,11 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "navigation-custom": "/components/navigation-custom/navigation-custom",
+    "topic-info": "/components/topic/topic-info",
+    "swiper-tab-head": "/components/index/swiper-tab-head",
+    "common-list": "/components/common/common-list",
+    "load-more": "/components/common/load-more"
+  }
+}

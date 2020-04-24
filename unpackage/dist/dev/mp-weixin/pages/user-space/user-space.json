@@ -1,0 +1,13 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "navigation-custom": "/components/navigation-custom/navigation-custom",
+    "swiper-tab-head": "/components/index/swiper-tab-head",
+    "user-space-head": "/components/user-space/user-space-head",
+    "profile-data": "/components/profile/profile-data",
+    "user-space-userinfo": "/components/user-space/user-space-userinfo",
+    "common-list": "/components/common/common-list",
+    "load-more": "/components/common/load-more",
+    "user-space-popup": "/components/user-space/user-space-popup"
+  }
+}

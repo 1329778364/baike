@@ -1,40 +1,31 @@
 <template>
 	<view>
-		<view style="margin-top:5px ;" class="u-f-ajc u-f-dc">
+		<view style="margin-top:5px ;" class="u-f-ajc u-f-dc" >
 			<view class="index-list u-f">
 				<view class="index-list1 u-f-ac">
 					<view>
 						<image :src="item.userpic" mode="aspectFit" lazy-load="true"></image>
-						<view>{{item.username}}</view> 
+						<view class="font-size-middle font-color-gray" style="margin-left: 20rpx;">{{item.username}}</view> 
 					</view>
-					<!-- #ifdef MP-WEIXIN -->
-						<view @tap="guanzhu" style="padding: 0 5px; border-radius: 100px; background: #D8D8D8;">
-							<view v-if="!wxguanzhu" style="font-size: 32rpx;" class="icon iconfont icon-zengjia"></view>
-							<view v-if="!wxguanzhu" style="font-size: 32rpx;">关注</view>
-							<view v-if="wxguanzhu" style="font-size: 32rpx;">已关注</view>
-						</view> 
-					<!-- #endif -->
-					<!-- #ifdef APP-PLUS -->
-						<view @tap="guanzhu" style="padding: 0 5px; border-radius: 100px; background: #D8D8D8;">
-							<view v-show="!item.isguanzhu" style="font-size: 32rpx;" class="icon iconfont icon-zengjia"></view>
-							<view v-show="!item.isguanzhu" style="font-size: 32rpx;">关注</view>
-							<view v-show="item.isguanzhu" style="font-size: 32rpx;">已关注</view>
-						</view>
-					<!-- #endif -->
+					<view v-if="showguanzhu" @tap="guanzhu" class="u-f-ajc guanzhuButton" >
+						<view v-if="!item.isguanzhu" class="font-size-middle icon iconfont icon-zengjia"></view>
+						<view v-if="!item.isguanzhu" class="font-size-middle">关注</view>
+						<view v-if="item.isguanzhu" class="font-size-middle font-color-gray">已关注</view>
+					</view> 
 				</view>
-				<view class="index-list2">{{item.title}}</view> 
-				<view class="index-list3 u-f-ajc">
-					<image :src="item.titlepic" mode="scaleToFill"></image>
+				<view class="index-list2 font-size-lg" @click="navToDetail">{{item.title}}</view> 
+				<view class="index-list3 u-f-ajc" @click="navToDetail">
+					<image v-if="item.titlepic" :src="item.titlepic" mode="aspectFill"></image>
 					<view v-show="item.type == 'video'" class="index-list-play icon iconfont icon-bofang"></view>
 					<view v-show="item.type== 'video'" class="index-list-play-info">{{item.playnum}}次播放 {{item.long}}</view>
 				</view>
 				<view class="index-list4 u-f-ac u-f-jsb">
 					<view class="u-f-ajc">
 						<view @tap="caozuo('ding')" class="u-f-ajc icon iconfont" :class="[(item.infonum.index==1)?'icon-dianzan1':'icon-dianzan']">
-							<view class="detail">{{item.infonum.ding}}</view>
+							<view class="detail">{{item.infonum.dingnum}}</view>
 						</view> 
 						<view @tap="caozuo('cai')" class="u-f-ajc icon iconfont" :class="[(item.infonum.index==2)?'icon-cai':'icon-cai1']">
-							<view class="detail">{{item.infonum.cai}}</view>
+							<view class="detail">{{item.infonum.cainum}}</view>
 						</view> 
 					</view>
 					<view class="u-f-ajc">
@@ -54,79 +45,66 @@
 	export default {
 		data(){
 			return{
-				wxguanzhu:""
+				infonum:this.item.infonum
+			}
+		},
+		computed:{
+			showguanzhu(){
+				return (this.User.userinfo.id == this.item.userid)?false:true
 			}
 		},
 		props:{
 				item:Object,
 				index:Number,
-				isguanzhu:Boolean
 			},
-			onLoad: () => {
-				// #ifdef MP-WEIXIN
-				this.wxguanzhu = this.isguanzhu
-				// #endif
+		onLoad: () => {
+
+		},
+		methods:{
+			navToDetail(){
+				uni.navigateTo({
+					url: '../../pages/detail/detail?detailData='+ JSON.stringify(this.item)
+				});
+				this.$emit("tap")
 			},
-			methods:{
-				caozuo(type){
-					switch (type){
-						case "ding":
-						if(this.item.infonum.index == 1){ return }
-						if(this.item.infonum.index == 2){
-							this.item.infonum.cai -= 1
-							this.item.infonum.ding += 1
-						}
-						this.item.infonum.index = 1;
-						 
-							break;
-						case "cai":
-						if(this.item.infonum.index == 2){ return }
-						if(this.item.infonum.index == 1){
-							this.item.infonum.cai += 1
-							this.item.infonum.ding -= 1
-						}
-						this.item.infonum.index = 2;
-						
-							break;
-					}
-					this.$emit("caozuo", this.item.infonum.index, this.item.infonum.ding, this.item.infonum.cai)
-				},
-				guanzhu(e){
-					// #ifdef APP-PLUS
-					if (!this.item.isguanzhu){
-						this.item.isguanzhu = true
-						uni.showToast({ 
-							title:"关注成功"
-						})
-						}
-					else {
-						this.item.isguanzhu = false
-						uni.showToast({ 
-							title:"取消关注"
-						}) 
-					}
-					this.$emit("guanzhu", this.item.isguanzhu)
-					// #endif
-					
-					// #ifdef MP-WEIXIN
-					if (!this.wxguanzhu){
-						this.wxguanzhu = true
-						uni.showToast({ 
-							title:"关注成功"
-						})
-						} 
-					else {
-						this.wxguanzhu = false
-						uni.showToast({ 
-							title:"取消关注"
-						})
-					}
-					// console.log(this.wxguanzhu)
-					this.$emit("guanzhu", this.wxguanzhu)
-					// #endif	
+			async caozuo(type){
+				let index = (type==="ding") ? 1:2
+				let data = {
+					type:"support",
+					post_id:this.item.id,
+					dotype: index
+				}
+				/* 修改父组件数据 */
+				this.$emit("change",data)				
+				if(index === 1) uni.showToast({title:"感谢点赞,推荐已收到!"});
+				/* 全局修改数据 */
+				uni.$emit("updateData",data)
+				
+				try{
+					let [err ,res] = await this.$http.post("/support",{post_id:this.item.id,type:index-1},{token:true, checkAuth:true, checkToken:true})
+					if(!this.util.CheckError(err, res)) return
+				}catch(e){ return }
+				
+			},
+			async guanzhu(){
+				/* 实时呈现 */				
+				let [err, res] = await this.$http.post(this.item.isguanzhu?"/user/unfollow":"/user/follow", 
+					{follow_id:this.item.userid},  /* 待关注用户id*/
+					{token:true, checkToken:true, checkAuth:true})						
+				/* 成功之后修改首页数据 */	
+				let data = {
+					type:"guanzhu",
+					userid:this.item.userid,
+					data:this.item.isguanzhu?false:true
+				}
+				/* 父组件数据更新 */
+				this.$emit("change",data)	
+				/* 开启全局监听 */
+				uni.$emit("updateData",data)
 			}
 		}
 	}
+	
 </script>
 
 <style scoped lang="scss">
@@ -137,10 +115,10 @@
 	align-self: center;
 	width: 90%;
 	flex-direction: column;	
-	margin-top: 4px auto;
+	margin: 5rpx 5rpx;
 	padding: 5px 10px;
-	border-radius: 20rpx; 
-	border: 1rpx solid #BBBBBB;
+	border-radius: 10rpx; 
+	box-shadow: #EEEEEE 0 0 10px 5px ;//边框阴影
 }
 .index-list1{
 	flex-direction: row;
@@ -150,11 +128,11 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 5px 5px;	
+	margin: 5px 0px;	
 }
 .index-list1>view>view{
 	font-size: $uni-font-size-base;
-	margin: 0 10rpx;
+	margin: 0 2rpx;
 }
 .index-list1 image{
 	border-radius: 10px;
@@ -165,7 +143,6 @@
 	font-size: $uni-font-size-lg;
 	border-bottom:2rpx solid $uni-border-color;
 	margin: 2px 0;
-	font-size: $uni-font-size-lg;
 }
 .index-list3{
 	border-radius: 20rpx;
@@ -185,7 +162,7 @@
 .index-list4 view{
 	flex-direction: row;
 	margin: 0 5px;
-	font-size: 32rpx;
+	font-size: 28rpx;
 }
 .index-list-play{
 	position: absolute;

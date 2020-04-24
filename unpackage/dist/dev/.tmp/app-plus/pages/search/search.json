@@ -1,0 +1,32 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom",
+  "animationType": "slide-in-bottom",
+  "titleNView": {
+    "autoBackButton": false,
+    "searchInput": {
+      "align": "left",
+      "backgroundColor": "#F7F7F7",
+      "borderRadius": "4px",
+      "placeholder": "搜索",
+      "placeholderColor": "#CCCCCC",
+      "disabled": false
+    },
+    "buttons": [
+      {
+        "color": "#000000",
+        "colorPressed": "#BBBBBB",
+        "float": "right",
+        "fontSize": "16px",
+        "text": "取消"
+      }
+    ]
+  },
+  "usingComponents": {
+    "mini-nav-bar": "/components/common/mini-nav-bar",
+    "index-list": "/components/index/index-list",
+    "topic-list": "/components/news/topic-list",
+    "load-more": "/components/common/load-more",
+    "no-thing": "/components/common/no-thing"
+  }
+}

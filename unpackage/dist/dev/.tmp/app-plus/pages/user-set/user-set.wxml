@@ -1,0 +1,1 @@
+<view class="border-box-no-border"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view><profile-list-item vue-id="{{'1-'+index}}" item="{{item}}" bind:__l="__l"></profile-list-item></view></block><button class="profile-set-btn" type="primary" data-event-opts="{{[['tap',[['logout',['$event']]]]]}}" bindtap="__e">退出登录</button></view>

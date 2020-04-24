@@ -81,7 +81,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
   onLaunch: function onLaunch() {var _this = this;
-    console.log('App Launch');
+    /* 初始化用户状态 */
+    this.User.__init();
+
 
     var menuButtonObject = uni.getMenuButtonBoundingClientRect();
     /* 获取系统从信息 */
@@ -110,6 +112,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+    /* 检查网络状态 */
+    // this.lib.NetWork.On()
+    /* 检查z更新 */
   },
 
 
@@ -149,7 +155,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */
 /*!********************************************************************************!*\
   !*** G:/WeChatProjects/project/baike/main.js?{"page":"pages%2Findex%2Findex"} ***!
   \********************************************************************************/
@@ -160,12 +174,12 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);__webpack_require__(/*! @dcloudio/uni-stat */ 5);
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.vue */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.vue */ 24));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_index.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
 
 /***/ }),
-/* 16 */
+/* 24 */
 /*!*************************************************************!*\
   !*** G:/WeChatProjects/project/baike/pages/index/index.vue ***!
   \*************************************************************/
@@ -174,8 +188,8 @@ createPage(_index.default);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_vue_vue_type_template_id_3ab21828_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=3ab21828&scoped=true& */ 17);
-/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ 19);
+/* harmony import */ var _index_vue_vue_type_template_id_3ab21828_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=3ab21828&scoped=true& */ 25);
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ 27);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 14);
 
@@ -205,7 +219,7 @@ component.options.__file = "WeChatProjects/project/baike/pages/index/index.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
-/* 17 */
+/* 25 */
 /*!********************************************************************************************************!*\
   !*** G:/WeChatProjects/project/baike/pages/index/index.vue?vue&type=template&id=3ab21828&scoped=true& ***!
   \********************************************************************************************************/
@@ -214,7 +228,7 @@ component.options.__file = "WeChatProjects/project/baike/pages/index/index.vue"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_template_id_3ab21828_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./index.vue?vue&type=template&id=3ab21828&scoped=true& */ 18);
+/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_template_id_3ab21828_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./index.vue?vue&type=template&id=3ab21828&scoped=true& */ 26);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_template_id_3ab21828_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_template_id_3ab21828_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
@@ -226,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 18 */
+/* 26 */
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!G:/WeChatProjects/project/baike/pages/index/index.vue?vue&type=template&id=3ab21828&scoped=true& ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -252,7 +266,7 @@ render._withStripped = true
 
 
 /***/ }),
-/* 19 */
+/* 27 */
 /*!**************************************************************************************!*\
   !*** G:/WeChatProjects/project/baike/pages/index/index.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************/
@@ -261,13 +275,13 @@ render._withStripped = true
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./index.vue?vue&type=script&lang=js& */ 20);
+/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./index.vue?vue&type=script&lang=js& */ 28);
 /* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
-/* 20 */
+/* 28 */
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!G:/WeChatProjects/project/baike/pages/index/index.vue?vue&type=script&lang=js& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -275,7 +289,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));
 
 
 
@@ -319,11 +333,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-var _App = _interopRequireDefault(__webpack_require__(/*! ../../App.vue */ 9));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var miniNavSearch = function miniNavSearch() {return __webpack_require__.e(/*! import() | components/index/mini-nav-search */ "components/index/mini-nav-search").then(__webpack_require__.bind(null, /*! ../../components/index/mini-nav-search.vue */ 67));};var indexList = function indexList() {return __webpack_require__.e(/*! import() | components/index/index-list */ "components/index/index-list").then(__webpack_require__.bind(null, /*! ../../components/index/index-list.vue */ 74));};var swiperTabHead = function swiperTabHead() {return __webpack_require__.e(/*! import() | components/index/swiper-tab-head */ "components/index/swiper-tab-head").then(__webpack_require__.bind(null, /*! ../../components/index/swiper-tab-head.vue */ 81));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/load-more */ "components/common/load-more").then(__webpack_require__.bind(null, /*! ../../components/common/load-more.vue */ 88));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/no-thing */ "components/common/no-thing").then(__webpack_require__.bind(null, /*! ../../components/common/no-thing.vue */ 95));};var _default =
+var _App = _interopRequireDefault(__webpack_require__(/*! ../../App.vue */ 9));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance");}function _iterableToArrayLimit(arr, i) {var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var miniNavSearch = function miniNavSearch() {return __webpack_require__.e(/*! import() | components/index/mini-nav-search */ "components/index/mini-nav-search").then(__webpack_require__.bind(null, /*! ../../components/index/mini-nav-search.vue */ 206));};var indexList = function indexList() {return __webpack_require__.e(/*! import() | components/index/index-list */ "components/index/index-list").then(__webpack_require__.bind(null, /*! ../../components/index/index-list.vue */ 213));};var swiperTabHead = function swiperTabHead() {return __webpack_require__.e(/*! import() | components/index/swiper-tab-head */ "components/index/swiper-tab-head").then(__webpack_require__.bind(null, /*! ../../components/index/swiper-tab-head.vue */ 220));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/load-more */ "components/common/load-more").then(__webpack_require__.bind(null, /*! ../../components/common/load-more.vue */ 227));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/no-thing */ "components/common/no-thing").then(__webpack_require__.bind(null, /*! ../../components/common/no-thing.vue */ 234));};var _default =
 {
   components: {
     miniNavSearch: miniNavSearch,
@@ -334,114 +344,31 @@ var _App = _interopRequireDefault(__webpack_require__(/*! ../../App.vue */ 9));f
 
   data: function data() {
     return {
+      isload: false,
       swiperheight: "",
       city: '北京',
-      newlist: [{
-        list: [
-        {
-          type: "img",
-          userpic: "../../static/icon/profile.png",
-          username: "昵称",
-          isguanzhu: true,
-          title: "我是标题",
-          titlepic: "../../static/image1.png",
-          infonum: {
-            index: 1, /* 0 没有操作 1顶 2踩*/
-            cai: 232,
-            ding: 122 },
-
-          commentnum: 200,
-          sharenum: 100 },
-        {
-          type: "video",
-          playnum: 23,
-          long: "28:09",
-          userpic: "../../static/icon/profile.png",
-          username: "昵称",
-          isguanzhu: true,
-          title: "我是标题",
-          titlepic: "../../static/image1.png",
-          infonum: {
-            index: 1, /* 0 没有操作 1顶 2踩*/
-            cai: 232,
-            ding: 122 },
-
-          commentnum: 200,
-          sharenum: 100 },
-        {
-          type: "img",
-          userpic: "../../static/icon/profile.png",
-          username: "昵称",
-          isguanzhu: true,
-          title: "我是标题",
-          titlepic: "../../static/image1.png",
-          infonum: {
-            index: 2, /* 0 没有操作 1顶 2踩*/
-            cai: 232,
-            ding: 122 },
-
-          commentnum: 200,
-          sharenum: 100 },
-        {
-          type: "img",
-          userpic: "../../static/icon/profile.png",
-          username: "昵称",
-          isguanzhu: false,
-          title: "我是标题",
-          titlepic: "../../static/image1.png",
-          infonum: {
-            index: 0, /* 0 没有操作 1顶 2踩*/
-            cai: 232,
-            ding: 122 },
-
-          commentnum: 200,
-          sharenum: 100 }],
-
-
-        id: "1",
-        loadmore: "上拉加载更多" },
-      {
-        list: [],
-        id: "2",
-        loadmore: "上拉加载更多" },
-      {
-        list: [],
-        id: "3",
-        loadmore: "上拉加载更多" },
-      {
-        list: [],
-        id: "4",
-        loadmore: "上拉加载更多" },
-      {
-        list: [],
-        id: "5",
-        loadmore: "上拉加载更多" },
-      {
-        list: [],
-        id: "6",
-        loadmore: "上拉加载更多" },
-      {
-        list: [],
-        id: "7",
-        loadmore: "上拉加载更多" }],
-
-
+      newlist: [],
       tabindex: 0,
-      tablist: [
-      { name: "关注", id: "guanzhu" },
-      { name: "体育", id: "tiyu" },
-      { name: "热点", id: "redian" },
-      { name: "财经", id: "caijing" },
-      { name: "音乐", id: "yinyue" },
-      { name: "视频", id: "shiping" },
-      { name: "游戏", id: "youxi" }] };
-
+      tablist: "" };
 
   },
   onLoad: function onLoad() {
     this.swiperheight = _App.default.globalData.windowHeight - uni.upx2px(230);
+    this.getNav();
+
+    /* 开启监听 */
+    uni.$on("updateData", this.updateData);
   },
 
+  onShow: function onShow() {
+    // 当第一次加载失败时 在进入该页面时重新进行加载
+    if (!this.isload) {
+      if (!this.tablist || this.newlist[0].list.length < 1) {
+        console.log("当第一次加载失败时 在进入该页面时重新进行加载");
+        this.getNav();
+      }
+    }
+  },
 
 
 
@@ -465,71 +392,148 @@ var _App = _interopRequireDefault(__webpack_require__(/*! ../../App.vue */ 9));f
 
 
   methods: {
+    /* 获取tabbar list */
+    getNav: function () {var _getNav = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _ref, _ref2, err, res, list, newlist, tablist;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  this.$http.get("/postclass", {}, { token: false, checkToken: false }));case 2:_ref = _context.sent;_ref2 = _slicedToArray(_ref, 2);err = _ref2[0];res = _ref2[1];if (
+                this.util.CheckError(err, res)) {_context.next = 8;break;}return _context.abrupt("return");case 8:
+                list = res.data.data.list;
+                newlist = [];
+                tablist = list.map(function (obj, index) {
+                  newlist.push({
+                    loadtext: "上拉加载更多",
+                    list: [],
+                    page: 1,
+                    firstload: false });
 
-    handleSearch: function handleSearch(e) {
+                  return {
+                    name: obj.classname,
+                    id: obj.id };
+
+                });
+                this.tablist = tablist,
+                this.newlist = newlist,
+                this.tablist.length > 0 ? this.getList() : "";case 12:case "end":return _context.stop();}}}, _callee, this);}));function getNav() {return _getNav.apply(this, arguments);}return getNav;}(),
+
+
+    /* 获取特定tabbar下面的文章辩题 */
+    getList: function () {var _getList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _this = this;var url, _ref3, _ref4, err, res, error, list, newlistitem;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+                url = "/postclass/".concat(this.tablist[this.tabindex].id, "/post/").concat(this.newlist[this.tabindex].page);_context2.next = 3;return (
+                  this.$http.get(url, {}, { token: true }));case 3:_ref3 = _context2.sent;_ref4 = _slicedToArray(_ref3, 2);err = _ref4[0];res = _ref4[1]; /* 加了token 才能知道你的关注信息*/
+                error = this.util.CheckError(err, res, function () {
+                  _this.newlist[_this.tabindex].loadtext = "上拉加载更多";
+                }, function () {
+                  _this.newlist[_this.tabindex].loadtext = "上拉加载更多";
+                });if (
+                error) {_context2.next = 10;break;}return _context2.abrupt("return");case 10:
+                list = res.data.data.list;
+                if (res) {
+                  newlistitem = list.map(function (obj, index) {
+                    return {
+                      userid: obj.user.id,
+                      userpic: obj.user.userpic,
+                      username: obj.user.username,
+                      id: obj.id,
+                      title: obj.title,
+                      titlepic: obj.titlepic,
+                      path: obj.path,
+                      share: obj.share,
+                      infonum: {
+                        index: obj.support.length > 0 ? obj.support[0].type + 1 : 0,
+                        dingnum: obj.ding_count,
+                        cainum: obj.cai_count },
+
+                      isguanzhu: !!obj.user.fens.length,
+                      video: false,
+                      type: "img",
+                      commentnum: obj.comment_count || 0,
+                      sharenum: obj.sharenum || 0 };
+
+                  });
+                  this.newlist[this.tabindex].list = this.newlist[this.tabindex].page > 1 ? this.newlist[this.tabindex].list.concat(newlistitem) : newlistitem;
+                  this.newlist[this.tabindex].firstload = true;
+                  if (list.length < 10) {
+                    this.newlist[this.tabindex].loadtext = "没有更多数据了";
+                  } else {
+                    this.newlist[this.tabindex].loadtext = "上拉加载更多";
+                  }
+                }
+                this.isload = true;case 13:case "end":return _context2.stop();}}}, _callee2, this);}));function getList() {return _getList.apply(this, arguments);}return getList;}(),
+
+
+
+    qiandao: function qiandao() {
+      // this.User.navigate({
+      // 	url: '../qiandao/qiandao'
+      // });
       uni.navigateTo({
-        url: '../search/search',
-        success: function success(res) {
-          console.log("跳转成功");
-        } });
+        url: "../zhiwen-livepush/zhiwen-livepush" });
+
+    },
+    handleSearch: function handleSearch(e) {
+      this.User.navigate({
+        url: '../search/search' });
+
+    },
+    fabu: function fabu() {
+      this.User.navigate({
+        url: '../add-input/add-input?postClass=' + JSON.stringify(this.tablist) });
 
     },
 
-    caozuo: function caozuo() {
-      // 暂时没做兼容 微信端使用无效
-
-      console.log(arguments);
-
-    },
-    guanzhu: function guanzhu(e) {
-
-
-
-
-
-
-
-      // console.log("这是子组件传过来的数据", e)
-      console.log("父组件携带数据", arguments);
-      /* 对关注信息进行设置 */
-      this.newlist[arguments[1]].list[arguments[2]].isguanzhu = arguments[0];
-      console.log("修改后的数据", this.newlist);
+    /* 子组件是件更新父组件数据 */
+    updateData: function updateData(res) {
+      switch (res.type) {
+        case "guanzhu":
+          this.updateGuanzhu(res);
+          break;
+        case "support":
+          this.updateSupport(res);
+          break;}
 
     },
+    updateGuanzhu: function updateGuanzhu(res) {
+      this.newlist[this.tabindex].list.forEach(function (item, index) {
+        if (item.userid === res.userid) {
+          item.isguanzhu = res.data;
+        }
+      });
+    },
+    /* 更新顶踩状态 由于是单片文章用find便可以 */
+    updateSupport: function updateSupport(res) {
+      /* 找到对应文章好的对象进行引用 */
+      var obj = this.newlist[this.tabindex].list.find(function (value) {
+        return value.id === res.post_id;
+      });
+      if (!obj) return;
+      var oldindex = obj.infonum.index;
+      /* 当前操作 更新图标颜色 */
+      obj.infonum.index = res.dotype;
+      /* 更新数字 */
+      /* 之前有操作过 */
+      if (oldindex !== 0) {
+        oldindex === 1 ? obj.infonum.dingnum-- : obj.infonum.cainum--;
+      }
+      /* 本次操作 */
+      res.dotype == 1 ? obj.infonum.dingnum++ : obj.infonum.cainum++;
 
-    loadmore: function loadmore(index) {var _this = this;
-      if (this.newlist[index].loadmore != "上拉加载更多") {return;}
-      this.newlist[index].loadmore = "加载中";
-      setTimeout(function () {
-        var obj = { type: "img",
-          userpic: "../../static/icon/profile.png",
-          username: "昵称",
-          isguanzhu: false,
-          title: "我是标题",
-          titlepic: "../../static/image1.png",
-          infonum: {
-            index: 0, /* 0 没有操作 1顶 2踩*/
-            cai: 232,
-            ding: 122 },
+    },
 
-          commentnum: 200,
-          sharenum: 100 };
-
-        _this.newlist[index].list.push(obj);
-        _this.newlist[index].loadmore = "上拉加载更多";
-      }, 1000);
+    loadmore: function loadmore(index) {
+      if (this.newlist[index].loadtext != "上拉加载更多") {return;}
+      this.newlist[index].loadtext = "加载中";
+      this.newlist[this.tabindex].page++;
+      this.getList();
     },
 
     changeSwiper: function changeSwiper(e) {
       this.tabindex = e.detail.current;
-      console.log("swiper", this.tabindex);
+      this.getList();
     },
     chooseTab: function chooseTab(e) {
       this.tabindex = e;
-      console.log("tab", this.tabindex);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
-],[[15,"common/runtime","common/vendor"]]]);
+],[[23,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/index/index.js.map

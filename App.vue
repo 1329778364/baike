@@ -7,7 +7,9 @@
 		},
 		
 		onLaunch: function() {
-			console.log('App Launch')
+			/* 初始化用户状态 */
+			this.User.__init()
+			
 			// #ifdef MP-WEIXIN
 			let menuButtonObject = uni.getMenuButtonBoundingClientRect();
 			/* 获取系统从信息 */
@@ -36,7 +38,11 @@
 						  }
 					})
 				// #endif
-			},
+				
+				/* 检查网络状态 */
+				// this.lib.NetWork.On()
+				/* 检查z更新 */
+			}, 
 			
 
 			
@@ -56,6 +62,7 @@
 	@import url("./common/icon.css");
 	/* 引入动画库 */
 	@import url("./common/animate.css");
+	/* @import url("./common/other.css"); */
 	/* 引入图标字体库 */
 	@import url("./common/iconfont.css");
 	

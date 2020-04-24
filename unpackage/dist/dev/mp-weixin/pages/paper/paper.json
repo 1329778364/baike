@@ -1,4 +1,12 @@
 {
+  "enablePullDownRefresh": true,
   "navigationBarTitleText": "小纸条",
-  "usingComponents": {}
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "mini-nav-bar": "/components/common/mini-nav-bar",
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "paper-list": "/components/paper/paper-list",
+    "load-more": "/components/common/load-more",
+    "paper-left-popup": "/components/paper/paper-left-popup"
+  }
 }

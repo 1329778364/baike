@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "设置",
+  "animationType": "slide-in-bottom",
+  "usingComponents": {
+    "profile-list-item": "/components/profile/profile-list-item"
+  }
+}

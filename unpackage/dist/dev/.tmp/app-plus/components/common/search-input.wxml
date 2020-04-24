@@ -1,0 +1,1 @@
+<view class="data-v-417ae9e2"><view data-event-opts="{{[['tap',[['openSearch',['$event']]]]]}}" class="search-input data-v-417ae9e2" bindtap="__e"><input class="uni-input icon iconfont data-v-417ae9e2" type="text" disabled placeholder="搜索话题" placeholder-class="icon-sousuo font-size-middle u-f-ajc topic-search"/></view></view>
