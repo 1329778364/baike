@@ -2,6 +2,7 @@
 
 ### 主要功能页面展示
 
+
 <div>
     <img src="./static/baike/first.jpg" width = "" height = "400" alt="图片名称" align=center />
     <img src="./static/baike/chat.jpg" width = "" height = "400" alt="图片名称" align=center />
