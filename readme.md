@@ -26,12 +26,3 @@
 1. 在App.vue中导入官方样式库 /commmon/uin.css
 2. 使用更改官方模板,实现快速开发
 3. 
-
-
-<iframe 
-    width="800" 
-    height="450" 
-    src="./static/baike/video.mp4" 
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
